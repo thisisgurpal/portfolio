@@ -1,3 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
+
 * {
   box-sizing: border-box;
+  font-family: 'Comfortaa', cursive;
+  margin: 0;
+  padding: 0;
+}
+
+circle,
+rect,
+line {
+  stroke-width: 7px;
+  stroke-linecap: round;
+  fill: transparent;
+}
+
+.carousel-status{
+  display: none;
+}
+
+/* Slideshow */
+
+.slideshow {
+  overflow: hidden;
+}
+
+.slideshowSlider {
+  white-space: nowrap;
+  transition: ease 1000ms;
+}
+
+.slide {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  // border-radius: 40px;
+}
+
+/* Buttons */
+
+.slideshowDots {
+  text-align: center;
+}
+
+.slideshowDot {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+
+  cursor: pointer;
+  margin: 15px 7px 0px;
+
+  background-color: #c4c4c4;
+}
+
+.slideshowDot.active {
+  background-color: #6a0dad;
 }
