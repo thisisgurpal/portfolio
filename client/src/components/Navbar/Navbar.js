@@ -118,9 +118,6 @@ const Navbar = ({ toggle }) => {
                 <NavLink to="/projects" activestyle="true">
                     Projects
                 </NavLink>
-                <NavLink to="/art" activestyle="true">
-                    Art
-                </NavLink>
                 <NavLink to="/about" activestyle="true">
                     About
                 </NavLink>

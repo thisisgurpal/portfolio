@@ -3,12 +3,10 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import Home from './components/Home'
 import Projects from './components//Projects'
-import Contact from './components/Contact'
 import About from './components/About'
 import { Flex } from '@chakra-ui/react'
 import Navbar from './components/Navbar/Navbar'
 import Sidebar from './components/Sidebar/Sidebar'
-import Art from './components/Art'
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -25,8 +23,6 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/art" element={<Art />} />
-          <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
         </Routes>
       </Flex>

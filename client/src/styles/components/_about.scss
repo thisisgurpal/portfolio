@@ -1,0 +1,99 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  width: 400px;
+  
+  @media screen and (max-width: 450px){
+    width: 300px;
+  }
+
+  @media screen and (max-width: 350px){
+      width: 250px;
+}
+}
+
+.imagev2 {
+  height: 400px;
+  width: 400px;
+  border-radius: 10px;
+
+  @media screen and (max-width: 450px){
+    height: 300px;
+  width: 300px;
+  }
+
+  @media screen and (max-width: 350px){
+    height: 250px;
+    width: 250px;
+}
+}
+
+.image {
+  height: 480px;
+  width: 400px;
+  border-radius: 10px;
+
+  @media screen and (max-width: 450px){
+    height: 360px;
+  width: 300px;
+  }
+
+  @media screen and (max-width: 350px){
+    height: 300px;
+    width: 250px;
+}
+}
+
+.imagev2.image1v2 {
+  background: url("../../components/images/banana/ski.jpg");
+  background-size: cover;
+}
+.imagev2.image2v2 {
+  background: url("../../components/images/banana/karate.jpg");
+  background-size: cover;
+}
+.imagev2.image3v2 {
+  background: url("../../components/images/banana/fries.jpg");
+  background-size: cover;
+}
+.imagev2.image4v2 {
+  background: url("../../components/images/banana/bombsquad.jpg");
+  background-size: cover;
+}
+.imagev2.image5v2 {
+  background: url("../../components/images/banana/skydiving.jpg");
+  background-size: cover;
+}
+.imagev2.image6v2 {
+  background: url("../../components/images/banana/rowing.jpg");
+  background-size: cover;
+}
+.imagev2.image7v2 {
+  background: url("../../components/images/banana/fencing.jpg");
+  background-size: cover;
+}
+.imagev2.image8v2 {
+  background: url("../../components/images/banana/rocket.jpg");
+  background-size: cover;
+}
+
+.image.image1 {
+  background: url("../../components/images/realism/Basketball\ draw.jpeg.jpg");
+  background-size: cover;
+}
+.image.image2 {
+  background: url("../../components/images/realism/eye.jpeg");
+  background-size: cover;
+}
+.image.image3 {
+  background: url("../../components/images/realism/waves.jpg");
+  background-size: cover;
+}
+.image.image4 {
+  background: url("../../components/images/realism/hand.jpg");
+  background-size: cover;
+}
+.image.image5 {
+  background: url("../../components/images/realism/3dblocks.jpeg");
+  background-size: cover;
+}
