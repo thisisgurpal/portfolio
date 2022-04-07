@@ -12,6 +12,7 @@ const Sidebar = ({ isOpen, toggle}) => {
             <SidebarWrapper>
                 <SidebarMenu>
                     <SidebarLink to="/projects" onClick={toggle}>Projects</SidebarLink>
+                    <SidebarLink to="/skills" onClick={toggle}>Skills</SidebarLink>
                     <SidebarLink to="/about" onClick={toggle}>About</SidebarLink>
                     <Flex w='100%' justifyContent='center'>
                     <a href="https://www.linkedin.com/in/gurpal-gohler/" target="_blank" rel="noopener noreferrer">

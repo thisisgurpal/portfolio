@@ -7,6 +7,7 @@ import About from './components/About'
 import { Flex } from '@chakra-ui/react'
 import Navbar from './components/Navbar/Navbar'
 import Sidebar from './components/Sidebar/Sidebar'
+import Skills from './components/Skills'
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -23,6 +24,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/skills" element={<Skills />} />
           <Route path="/about" element={<About />} />
         </Routes>
       </Flex>

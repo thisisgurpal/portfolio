@@ -118,6 +118,9 @@ const Navbar = ({ toggle }) => {
                 <NavLink to="/projects" activestyle="true">
                     Projects
                 </NavLink>
+                <NavLink to="/skills" activestyle="true">
+                    Skills
+                </NavLink>
                 <NavLink to="/about" activestyle="true">
                     About
                 </NavLink>
