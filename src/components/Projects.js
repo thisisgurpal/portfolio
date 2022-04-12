@@ -46,8 +46,8 @@ function Projects() {
         <Text textAlign='center' className='title' fontSize='30px'>Projects</Text>
         <Flex flexDirection='row' w='90%' mt='20px' justifyContent='center' flexWrap='wrap'>
           {projects.map(project => 
-          <Box boxShadow='md' w='600px' borderWidth='1px' m='5' borderRadius='lg' overflow='hidden'>
-          <Box h='350px' backgroundSize='cover' backgroundImage={project.image}>
+          <Box boxShadow='md' w={{ base: '250px', sm: '400px', md: '600px' }} borderWidth='1px' m='5' borderRadius='lg' overflow='hidden'>
+          <Box h={{ base: '146px', sm: '230px', md: '350px' }} backgroundSize='cover' backgroundImage={project.image}>
           </Box>
           <Box p='6'>
             <Box display='flex'>
@@ -58,7 +58,7 @@ function Projects() {
             <Box
               mt='3'
               fontWeight='semibold'
-              as='h4'
+              fontSize={{ base: '12px', sm: '15px', md: '20px' }}
               lineHeight='tight'
               isTruncated
             >
@@ -67,7 +67,7 @@ function Projects() {
             <Box
               mt='3'
               letterSpacing='wide'
-              fontSize='sm'
+              fontSize={{ base: '10px', sm: '12px', md: '15px' }}
             >
               {project.description}
             </Box>
@@ -76,7 +76,7 @@ function Projects() {
               color='gray.400'
               fontWeight='semibold'
               letterSpacing='wide'
-              fontSize='xs'
+              fontSize={{ base: '10px', sm: '12px', md: '15px' }}
             >
               {project.skills}
             </Box>
