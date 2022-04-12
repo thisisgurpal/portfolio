@@ -12,6 +12,8 @@ function Projects() {
     live: 'https://runnersuniverse.herokuapp.com/',
     github: 'https://github.com/thisisgurpal/run_results_app',
     description: 'Solo project creating a running app that allows visitors to get information on running events, view past years leaders, view runners profiles, view fitness and health blogs and once registered and logged in you can save your favourite runners, save your favourite blogs and also comment on running events. For this project I built the back end which included making my own API, I also designed and developed the front end. This was done using PostgreSQL, Python, TablePlus, React.',
+    timeframe: '1 week',
+    teamstructure: 'Solo',
   },
   {
     company: 'General Assembly',
@@ -21,6 +23,8 @@ function Projects() {
     live: 'https://tiny-habits-sei61.herokuapp.com/',
     github: 'https://github.com/thisisgurpal/Tiny-Habits',
     description: 'Developed a habit app that allows you to join upcoming 30 day habit challenges using React, Node JS, Express JS and MongoDB (MERN stack). You will be able to register, create a profile, join events, post your completed habits, comment on events and like events. My main responsibilities were to help build the back end, bug fixing, designing the front end profile page pages for the users, adding the completed habits feed, ensuring you are able to edit and delete where necessary and also seeding the users.',
+    timeframe: '1 week',
+    teamstructure: 'Group',
   },
   {
     company: 'General Assembly',
@@ -30,6 +34,8 @@ function Projects() {
     live: 'https://reciplease-thisisgurpal.netlify.app/',
     github: 'https://github.com/thisisgurpal/food-api',
     description: 'Built an app using JavaScript and React that allows you to search for your desired food and see how it’s made including details about measurements and ingredients. This project was paired programming for 48 hours. I was responsible for ensuring that the back end was correctly retrieving information from an external API, designing the home page, designing the individual recipe pages and also building the filter functions to choose a recipe.',
+    timeframe: '2 days',
+    teamstructure: 'Pair',
   },
   {
     company: 'General Assembly',
@@ -39,6 +45,8 @@ function Projects() {
     live: 'https://thisisgurpal.github.io/pacman/',
     github: 'https://github.com/thisisgurpal/pacman',
     description: 'Solo project building a childhood favourite game, Pacman. This project was over the duration of a week using JavaScript, HTML and CSS. The game has two different maps, the ability to go to the next level, and all other characteristics of the Pacman game.',
+    timeframe: '1 week',
+    teamstructure: 'Solo',
   },]
 
   return (
@@ -63,6 +71,22 @@ function Projects() {
               isTruncated
             >
               {project.name}
+            </Box>
+            <Box
+              mt='3'
+              fontSize={{ base: '10px', sm: '12px', md: '15px' }}
+              lineHeight='tight'
+              isTruncated
+            >
+              Timeframe: {project.timeframe}
+            </Box>
+            <Box
+              mt='3'
+              fontSize={{ base: '10px', sm: '12px', md: '15px' }}
+              lineHeight='tight'
+              isTruncated
+            >
+              Team Structure: {project.teamstructure}
             </Box>
             <Box
               mt='3'
