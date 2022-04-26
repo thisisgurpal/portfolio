@@ -50,7 +50,7 @@ function Projects() {
   },]
 
   return (
-    <Flex flexDirection='column' alignItems='center' minHeight='100vh'>
+    <Flex mt='100px' flexDirection='column' alignItems='center' minHeight='100vh'>
         <Text textAlign='center' className='title' fontSize='30px'>Projects</Text>
         <Flex flexDirection='row' w='90%' mt='20px' justifyContent='center' flexWrap='wrap'>
           {projects.map(project => 

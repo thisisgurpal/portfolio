@@ -71,7 +71,7 @@ function Skills() {
     ]
 
     return (
-        <Flex flexDirection='column' alignItems='center' minHeight='100vh'>
+        <Flex mt='100px' flexDirection='column' alignItems='center' minHeight='100vh'>
             <Text textAlign='center' className='title' fontSize='30px'>Skills</Text>
             <Flex flexDirection='row' w='90%' mt='20px' justifyContent='center' flexWrap='wrap'>
                 {skills.map(skill =>
