@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Text, Image, Badge, Flex, Button } from '@chakra-ui/react'
+import { Box, Text, Image, Badge, Flex, Button, useColorModeValue } from '@chakra-ui/react'
 import FadeIn from 'react-fade-in';
 
 function Projects(props) {
@@ -49,8 +49,10 @@ function Projects(props) {
     teamstructure: 'Solo',
   },]
 
+  const bg = useColorModeValue('Dark', 'Light')
+
   return (
-        <><Text ref={props.projectSection} textAlign='center' className='title' fontSize='30px'>Projects</Text>
+        <Flex direction='column' bg={bg} alignItems='center'><Text ref={props.projectSection} textAlign='center' className='title' fontSize='30px'>Projects</Text>
         <Flex flexDirection='row' w='90%' mt='20px' justifyContent='center' flexWrap='wrap'>
       {projects.map(project => <Box transition='0.4s' className='project-box' boxShadow='xl' w={{ base: '250px', sm: '400px', md: '600px' }} borderWidth='1px' m='5' borderRadius='lg' overflow='hidden'>
         <Box h={{ base: '146px', sm: '230px', md: '350px' }} backgroundSize='cover' backgroundImage={project.image}>
@@ -104,12 +106,12 @@ function Projects(props) {
           </Box>
           <Flex justifyContent='center' mt='5'>
             <a href={project.live} target="_blank" rel="noopener noreferrer">
-              <Button mr='2' variant='outline'>
+              <Button mr='2' transition='0.4s' className='mywork-button' boxShadow='lg' variant='outline' color='blue.400' borderColor='blue.400'>
                 Live
               </Button>
             </a>
             <a href={project.github} target="_blank" rel="noopener noreferrer">
-              <Button ml='2' variant='outline'>
+              <Button ml='2' transition='0.4s' color='white' boxShadow='lg' bgGradient='linear(blue.500 0%, blue.400 25%, blue.300 70%)' className='contact-button'>
                 <Image mr='2' w='20px' h='20px' src='https://res.cloudinary.com/dmbkzjwzq/image/upload/v1649251897/portfolio/githublogo1_lbprky.jpg' alt='' />
                 GitHub
               </Button>
@@ -118,7 +120,7 @@ function Projects(props) {
         </Box>
       </Box>
       )}
-    </Flex></>
+    </Flex></Flex>
           )
 }
 

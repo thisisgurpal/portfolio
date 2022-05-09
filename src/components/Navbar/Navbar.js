@@ -7,7 +7,7 @@ import {
     NavLinkHome 
 } from './NavbarElements'
 import { motion } from "framer-motion";
-import { Box, Button, Text } from "@chakra-ui/react";
+import { Box, Button, Text, useColorMode, Flex } from "@chakra-ui/react";
 
 const Navbar = ( props, { toggle }) => {
 
@@ -26,9 +26,11 @@ const Navbar = ( props, { toggle }) => {
     }
   };
 
+  const { colorMode, toggleColorMode } = useColorMode()
+
     return (
         <Nav>
-              <Box paddingBottom='2'>
+              <Flex paddingBottom='2'>
               <motion.svg
       width="80"
       height="80"
@@ -110,14 +112,17 @@ const Navbar = ( props, { toggle }) => {
         variants={draw}
       />
     </motion.svg>
-              </Box>
             <Bars onClick={toggle}/>
             <Box ml='5' className='nav-links'>
-            <Text className="nav-button" variant='Link' onClick={props.scrollToProjectSection}>Projects</Text>
-            <Text className="nav-button" variant='Link' onClick={props.scrollToSkillsSection}>Skills</Text>
-            <Text className="nav-button" variant='Link' onClick={props.scrollToAboutSection}>About</Text>
-            <Text className="nav-button" variant='Link' onClick={props.scrollToContactSection}>Contact</Text>
+            <Text transition='0.4s' className="nav-button" variant='Link' onClick={props.scrollToProjectSection}>Projects</Text>
+            <Text transition='0.4s' className="nav-button" variant='Link' onClick={props.scrollToSkillsSection}>Skills</Text>
+            <Text transition='0.4s' className="nav-button" variant='Link' onClick={props.scrollToAboutSection}>About</Text>
+            <Text transition='0.4s' className="nav-button" variant='Link' onClick={props.scrollToContactSection}>Contact</Text>
             </Box>
+            </Flex>
+            <Button transition='0.4s' boxShadow='lg' color='white' bgGradient='linear(blue.500 0%, blue.400 25%, blue.300 70%)' className='contact-button' mr='40px' onClick={toggleColorMode}>
+        Toggle {colorMode === 'light' ? 'Dark' : 'Light'}
+      </Button>
             
         </Nav>
     )

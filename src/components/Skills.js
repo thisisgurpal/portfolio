@@ -72,11 +72,11 @@ function Skills(props) {
 
     return (
             <><Text mt='40' ref={props.skillsSection} textAlign='center' className='title' fontSize='30px'>Skills</Text><Flex flexDirection='row' w='90%' mt='20px' justifyContent='center' flexWrap='wrap'>
-            {skills.map(skill => <Flex m='2' transition='0.4s' className='skill-box' justifyContent='center' alignItems='center' boxShadow='md' borderTopRadius='10px' h='200px' w='150px' flexDirection='column'>
+            {skills.map(skill => <Flex m='2' backgroundColor='white' transition='0.4s' color='black' className='skill-box' justifyContent='center' alignItems='center' boxShadow='md' borderRadius='10px' h='200px' w='150px' flexDirection='column'>
                 <Flex justifyContent='center' alignItems='center' w='100%' h='80%'>
                     <Image h='100px' src={skill.image} alt='' />
                 </Flex>
-                <Flex bgGradient={[
+                <Flex borderBottomRadius='10px' bgGradient={[
                     'linear(to-tr, blue.300, blue.400)',
                     'linear(to-t, blue.200, blue.500)',
                     'linear(to-b, blue.100, blue.300)',

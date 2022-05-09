@@ -10,6 +10,7 @@ import Sidebar from './components/Sidebar/Sidebar'
 import Skills from './components/Skills'
 import Footer from './components/Footer'
 import Contact from './components/Contact'
+import { Button, useColorMode } from '@chakra-ui/react';
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -46,6 +47,7 @@ const App = () => {
     top: aboutSection.current.offsetTop,
     behavior: "smooth"
   })
+
 
   return (
       <Flex minHeight='100vh' direction='column' alignItems='center' justifyContent='space-between'>
