@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useRef } from "react"
 import { 
     Nav, 
     NavLink, 
@@ -7,9 +7,9 @@ import {
     NavLinkHome 
 } from './NavbarElements'
 import { motion } from "framer-motion";
-import { Box } from "@chakra-ui/react";
+import { Box, Button, Text } from "@chakra-ui/react";
 
-const Navbar = ({ toggle }) => {
+const Navbar = ( props, { toggle }) => {
 
   const draw = {
     hidden: { pathLength: 0, opacity: 0 },
@@ -28,7 +28,6 @@ const Navbar = ({ toggle }) => {
 
     return (
         <Nav>
-            <NavLinkHome to="/">
               <Box paddingBottom='2'>
               <motion.svg
       width="80"
@@ -112,22 +111,14 @@ const Navbar = ({ toggle }) => {
       />
     </motion.svg>
               </Box>
-            </NavLinkHome>
             <Bars onClick={toggle}/>
-            <NavMenu>
-                <NavLink to="/projects" activestyle="true">
-                    Projects
-                </NavLink>
-                <NavLink to="/skills" activestyle="true">
-                    Skills
-                </NavLink>
-                <NavLink to="/about" activestyle="true">
-                    About
-                </NavLink>
-                <NavLink to="/contact" activestyle="true">
-                    Contact
-                </NavLink>
-            </NavMenu>
+            <Box ml='5' className='nav-links'>
+            <Text className="nav-button" variant='Link' onClick={props.scrollToProjectSection}>Projects</Text>
+            <Text className="nav-button" variant='Link' onClick={props.scrollToSkillsSection}>Skills</Text>
+            <Text className="nav-button" variant='Link' onClick={props.scrollToAboutSection}>About</Text>
+            <Text className="nav-button" variant='Link' onClick={props.scrollToContactSection}>Contact</Text>
+            </Box>
+            
         </Nav>
     )
 }

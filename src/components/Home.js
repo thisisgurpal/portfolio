@@ -1,28 +1,35 @@
-import React, { useEffect } from 'react'
-import { Text, Flex, Box, Image } from '@chakra-ui/react';
+import React, { useEffect, useRef } from 'react'
+import { Text, Flex, Box, Image, Button } from '@chakra-ui/react';
 import FadeIn from 'react-fade-in';
-import ImageSlider from './helper/ImageSlider';
-import { SlideData } from './helper/SlideData';
-import { Carousel } from 'react-responsive-carousel';
 
 function Home() {
 
+  // const projectSection = useRef(null)
+
+  // const scrollToProjectSection = () =>
+  //   window.scrollTo({
+  //     top: projectSection.current.offsetTop,
+  //     behavior: "smooth"
+  //   })
+
   return (
-    <Flex mt='100px' flexDirection='column' alignItems='center' minHeight='100vh'>
-      <Box mt='50' mb='50' w='90%'>
+
+    <Flex className='hero' w='100%' h='760px'>
+      <Flex w='100%' justifyContent='space-evenly' alignItems='center' mt='50' mb='50'>
         <FadeIn>
-          <Text fontSize={{ base: '40px', sm: '50px', md: '60px' }} textAlign='center' className='myname'>Hi! I'm Gurpal Gohler</Text>
-          <Text textAlign='center' fontSize={{ base: '20px', sm: '25px', md: '30px' }} mt='5'>Junior Software Engineer</Text>
-          <Flex w='100%' justifyContent='center'>
-            <a href="https://www.linkedin.com/in/gurpal-gohler/" target="_blank" rel="noopener noreferrer">
-              <Image mr='2' mt='10' w='50px' h='50px' src='https://res.cloudinary.com/dmbkzjwzq/image/upload/v1649246500/portfolio/linkedin2_u1nqr0.jpg' alt='' />
-            </a>
-            <a href="https://github.com/thisisgurpal" target="_blank" rel="noopener noreferrer">
-              <Image ml='2' mt='10' w='50px' h='50px' src='https://res.cloudinary.com/dmbkzjwzq/image/upload/v1649251897/portfolio/githublogo1_lbprky.jpg' alt='' />
-            </a>
+          <Text fontSize={{ base: '30px', sm: '40px', md: '80px' }} textAlign='left' className='myname'>Hi, I'm Gurpal</Text>
+          <Text textAlign='left' fontSize={{ base: '10px', sm: '15px', md: '40px' }} mt='5'>Junior Software Engineer</Text>
+          <Flex mt='5' justifyContent='center'>
+            <Button transition='0.4s' className='mywork-button' boxShadow='lg' mr='5' variant='outline' color='blue.400' borderColor='blue.400'>My Work</Button>
+            <Button transition='0.4s' color='white' bgGradient='linear(blue.500 0%, blue.400 25%, blue.300 70%)' className='contact-button'>Contact Me</Button>
           </Flex>
         </FadeIn>
-      </Box>
+        <Flex>
+          <FadeIn>
+            <Box boxShadow='2xl' className='intro-image'></Box>
+          </FadeIn>
+        </Flex>
+      </Flex>
     </Flex>
   );
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, Text, Image, Badge, Flex, Button } from '@chakra-ui/react'
 import FadeIn from 'react-fade-in';
 
-function Projects() {
+function Projects(props) {
 
   const projects = [{
     company: 'General Assembly',
@@ -50,79 +50,76 @@ function Projects() {
   },]
 
   return (
-    <Flex mt='100px' flexDirection='column' alignItems='center' minHeight='100vh'>
-        <Text textAlign='center' className='title' fontSize='30px'>Projects</Text>
+        <><Text ref={props.projectSection} textAlign='center' className='title' fontSize='30px'>Projects</Text>
         <Flex flexDirection='row' w='90%' mt='20px' justifyContent='center' flexWrap='wrap'>
-          {projects.map(project => 
-          <Box boxShadow='md' w={{ base: '250px', sm: '400px', md: '600px' }} borderWidth='1px' m='5' borderRadius='lg' overflow='hidden'>
-          <Box h={{ base: '146px', sm: '230px', md: '350px' }} backgroundSize='cover' backgroundImage={project.image}>
-          </Box>
-          <Box p='6'>
-            <Box display='flex'>
-              <Badge borderRadius='full' px='2'>
-                {project.company}
-              </Badge>
-            </Box>
-            <Box
-              mt='3'
-              fontWeight='semibold'
-              fontSize={{ base: '12px', sm: '15px', md: '20px' }}
-              lineHeight='tight'
-              isTruncated
-            >
-              {project.name}
-            </Box>
-            <Box
-              mt='3'
-              fontSize={{ base: '10px', sm: '12px', md: '15px' }}
-              lineHeight='tight'
-              isTruncated
-            >
-              Timeframe: {project.timeframe}
-            </Box>
-            <Box
-              mt='3'
-              fontSize={{ base: '10px', sm: '12px', md: '15px' }}
-              lineHeight='tight'
-              isTruncated
-            >
-              Team Structure: {project.teamstructure}
-            </Box>
-            <Box
-              mt='3'
-              letterSpacing='wide'
-              fontSize={{ base: '10px', sm: '12px', md: '15px' }}
-            >
-              {project.description}
-            </Box>
-            <Box
-              mt='3'
-              color='gray.400'
-              fontWeight='semibold'
-              letterSpacing='wide'
-              fontSize={{ base: '10px', sm: '12px', md: '15px' }}
-            >
-              {project.skills}
-            </Box>
-            <Flex justifyContent='center' mt='5'>
-              <a href={project.live} target="_blank" rel="noopener noreferrer">
-                <Button mr='2' variant='outline'>
-                  Live
-                </Button>
-              </a>
-              <a href={project.github} target="_blank" rel="noopener noreferrer">
-                <Button ml='2' variant='outline'>
-                  <Image mr='2' w='20px' h='20px' src='https://res.cloudinary.com/dmbkzjwzq/image/upload/v1649251897/portfolio/githublogo1_lbprky.jpg' alt='' />
-                  GitHub
-                </Button>
-              </a>
-            </Flex>
-          </Box>
+      {projects.map(project => <Box transition='0.4s' className='project-box' boxShadow='xl' w={{ base: '250px', sm: '400px', md: '600px' }} borderWidth='1px' m='5' borderRadius='lg' overflow='hidden'>
+        <Box h={{ base: '146px', sm: '230px', md: '350px' }} backgroundSize='cover' backgroundImage={project.image}>
         </Box>
-            )}
-        </Flex>
-    </Flex>
-  )
+        <Box p='6'>
+          <Box display='flex'>
+            <Badge borderRadius='full' px='2'>
+              {project.company}
+            </Badge>
+          </Box>
+          <Box
+            mt='3'
+            fontWeight='semibold'
+            fontSize={{ base: '12px', sm: '15px', md: '20px' }}
+            lineHeight='tight'
+            isTruncated
+          >
+            {project.name}
+          </Box>
+          <Box
+            mt='3'
+            fontSize={{ base: '10px', sm: '12px', md: '15px' }}
+            lineHeight='tight'
+            isTruncated
+          >
+            Timeframe: {project.timeframe}
+          </Box>
+          <Box
+            mt='3'
+            fontSize={{ base: '10px', sm: '12px', md: '15px' }}
+            lineHeight='tight'
+            isTruncated
+          >
+            Team Structure: {project.teamstructure}
+          </Box>
+          <Box
+            mt='3'
+            letterSpacing='wide'
+            fontSize={{ base: '10px', sm: '12px', md: '15px' }}
+          >
+            {project.description}
+          </Box>
+          <Box
+            mt='3'
+            color='gray.400'
+            fontWeight='semibold'
+            letterSpacing='wide'
+            fontSize={{ base: '10px', sm: '12px', md: '15px' }}
+          >
+            {project.skills}
+          </Box>
+          <Flex justifyContent='center' mt='5'>
+            <a href={project.live} target="_blank" rel="noopener noreferrer">
+              <Button mr='2' variant='outline'>
+                Live
+              </Button>
+            </a>
+            <a href={project.github} target="_blank" rel="noopener noreferrer">
+              <Button ml='2' variant='outline'>
+                <Image mr='2' w='20px' h='20px' src='https://res.cloudinary.com/dmbkzjwzq/image/upload/v1649251897/portfolio/githublogo1_lbprky.jpg' alt='' />
+                GitHub
+              </Button>
+            </a>
+          </Flex>
+        </Box>
+      </Box>
+      )}
+    </Flex></>
+          )
 }
 
 export default Projects

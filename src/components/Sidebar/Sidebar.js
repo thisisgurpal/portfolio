@@ -1,6 +1,6 @@
 import React from 'react'
 import { SidebarContainer, Icon, CloseIcon, SidebarWrapper, SidebarMenu, SideBtnWrap, SidebarLink, SidebarRoute } from './SidebarElements'
-import { Flex, Image } from '@chakra-ui/react'
+import { Flex, Image, Button } from '@chakra-ui/react'
 
 const Sidebar = ({ isOpen, toggle}) => {
 
@@ -11,9 +11,9 @@ const Sidebar = ({ isOpen, toggle}) => {
             </Icon>
             <SidebarWrapper>
                 <SidebarMenu>
-                    <SidebarLink to="/projects" onClick={toggle}>Projects</SidebarLink>
-                    <SidebarLink to="/skills" onClick={toggle}>Skills</SidebarLink>
-                    <SidebarLink to="/about" onClick={toggle}>About</SidebarLink>
+                    <Button to="/projects" onClick={toggle}>Projects</Button>
+                    <Button to="/skills" onClick={toggle}>Skills</Button>
+                    <Button to="/about" onClick={toggle}>About</Button>
                     <Flex w='100%' justifyContent='center'>
                     <a href="https://www.linkedin.com/in/gurpal-gohler/" target="_blank" rel="noopener noreferrer">
                     <Image mr='2' mt='10' w='50px' h='50px' src='https://res.cloudinary.com/dmbkzjwzq/image/upload/v1649246055/portfolio/linkedIn_lv7pro.jpg' alt=''/>
