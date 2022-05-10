@@ -52,7 +52,7 @@ function Projects(props) {
   const bg = useColorModeValue('Dark', 'Light')
 
   return (
-        <Flex direction='column' bg={bg} alignItems='center'><Text ref={props.projectSection} textAlign='center' className='title' fontSize='30px'>Projects</Text>
+        <Flex minHeight='calc(100vh - 80px)' direction='column' bg={bg} alignItems='center'><Text ref={props.projectSection} textAlign='center' className='title' fontSize={{ base: '30px', sm: '40px', md: '60px', lg: '60px', xl: '75px' }}>Projects</Text>
         <Flex flexDirection='row' w='90%' mt='20px' justifyContent='center' flexWrap='wrap'>
       {projects.map(project => <Box transition='0.4s' className='project-box' boxShadow='xl' w={{ base: '250px', sm: '400px', md: '600px' }} borderWidth='1px' m='5' borderRadius='lg' overflow='hidden'>
         <Box h={{ base: '146px', sm: '230px', md: '350px' }} backgroundSize='cover' backgroundImage={project.image}>

@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { SidebarContainer, Icon, CloseIcon, SidebarWrapper, SidebarMenu, SideBtnWrap, SidebarLink, SidebarRoute } from './SidebarElements'
-import { Flex, Image, Button } from '@chakra-ui/react'
+import { Flex, Image, Button, Text } from '@chakra-ui/react'
 
-const Sidebar = ({ isOpen, toggle}) => {
+const Sidebar = ({ isOpen, toggle, scrollToProjectSection, scrollToSkillsSection, scrollToAboutSection, scrollToContactSection }) => {
 
     return (
         <SidebarContainer isOpen={isOpen} onClick={toggle}>
@@ -11,9 +11,10 @@ const Sidebar = ({ isOpen, toggle}) => {
             </Icon>
             <SidebarWrapper>
                 <SidebarMenu>
-                    <Button to="/projects" onClick={toggle}>Projects</Button>
-                    <Button to="/skills" onClick={toggle}>Skills</Button>
-                    <Button to="/about" onClick={toggle}>About</Button>
+                    <Text transition='0.4s' variant='Link' className='menu-link' onClick={() => { toggle(); scrollToProjectSection();}}>Projects</Text>
+                    <Text transition='0.4s' variant='Link' className='menu-link' onClick={() => { toggle(); scrollToSkillsSection();}}>Skills</Text>
+                    <Text transition='0.4s' variant='Link' className='menu-link' onClick={() => { toggle(); scrollToAboutSection();}}>About</Text>
+                    <Text transition='0.4s' variant='Link' className='menu-link' onClick={() => { toggle(); scrollToContactSection();}}>Contact</Text>
                     <Flex w='100%' justifyContent='center'>
                     <a href="https://www.linkedin.com/in/gurpal-gohler/" target="_blank" rel="noopener noreferrer">
                     <Image mr='2' mt='10' w='50px' h='50px' src='https://res.cloudinary.com/dmbkzjwzq/image/upload/v1649246055/portfolio/linkedIn_lv7pro.jpg' alt=''/>

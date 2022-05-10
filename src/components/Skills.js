@@ -71,7 +71,8 @@ function Skills(props) {
     ]
 
     return (
-            <><Text mt='40' ref={props.skillsSection} textAlign='center' className='title' fontSize='30px'>Skills</Text><Flex flexDirection='row' w='90%' mt='20px' justifyContent='center' flexWrap='wrap'>
+            <Flex minHeight='calc(100vh - 80px)' flexDirection='column' alignItems='center'>
+                <Text mt='40' ref={props.skillsSection} textAlign='center' className='title' fontSize={{ base: '30px', sm: '40px', md: '60px', lg: '60px', xl: '75px' }}>Skills</Text><Flex flexDirection='row' w='90%' mt='20px' justifyContent='center' flexWrap='wrap'>
             {skills.map(skill => <Flex m='2' backgroundColor='white' transition='0.4s' color='black' className='skill-box' justifyContent='center' alignItems='center' boxShadow='md' borderRadius='10px' h='200px' w='150px' flexDirection='column'>
                 <Flex justifyContent='center' alignItems='center' w='100%' h='80%'>
                     <Image h='100px' src={skill.image} alt='' />
@@ -85,7 +86,8 @@ function Skills(props) {
                 </Flex>
             </Flex>
             )}
-        </Flex></>
+        </Flex>
+        </Flex>
     )
 }
 

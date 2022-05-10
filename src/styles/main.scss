@@ -14,8 +14,6 @@
 
 .intro-image{
   background-image: url('./../components/images/intro/6M8G.gif');
-  width: 750px;
-  height: 450px;
   border-radius: 10px;
   background-size: cover;
 }
@@ -23,8 +21,8 @@
 .nav-button{
   font-size: 20px;
   margin-right: 10px;
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
     text-decoration: none;
     padding: 0 1rem;
     height: 100%;
@@ -45,6 +43,21 @@
 }
 }
 
+.switch{
+  display: flex;
+  align-items: center;
+  background-color: rgb(231, 231, 231);
+  padding: 10px;
+  border-radius: 15px;
+  &:hover {
+    color: rgb(68, 152, 231);
+    transform: scale(1.04) translateY(-2px);
+} 
+@media screen and (max-width: 750px) {
+  margin-left: 15px;
+}
+}
+
 .mywork-button{
   &:hover {
     transform: scale(1.04) translateY(-2px);
@@ -52,7 +65,8 @@
 }
 
 .nav-links{
-    display: flex;
+  display: flex;
+  align-items: center;
 
     @media screen and (max-width: 750px) {
         display: none;
@@ -70,6 +84,42 @@
     transform: scale(1.1) translateY(-2px);
   }
 }
+
+.menu-link{
+  color: white;
+  font-size: 20px;
+  margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+    cursor: pointer;
+    text-align: center;
+
+    &:hover {
+      color: rgb(68, 152, 231);
+      transform: scale(1.04) translateY(-2px);
+        font-weight: bold;
+    }
+}
+
+.job-title {
+  align-self: flex-end;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  margin: 0 auto 0 auto;
+  transform-origin: bottom;
+  animation-name: job-title;
+  animation-timing-function: ease;
+}
+@keyframes job-title {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
 @import './components/about';
 @import './components/home';
 @import './components/navbar'

@@ -50,7 +50,6 @@ export const Nav = styled.nav`
 
 export const Bars = styled(FaBars)`
     display: none;
-    color: black;
 
     @media screen and (max-width: 750px) {
         display: block;
